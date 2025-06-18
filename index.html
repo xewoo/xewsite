@@ -9,12 +9,16 @@
 <body>
     <main class="container">
         <header>
-            <h1>About me</h1>
+            <h1 id="title-ru">Обо мне</h1>
+            <h1 id="title-en" style="display:none;">About me</h1>
         </header>
-        <section class="about-block" style="color: #fff;">
+        <section class="about-block" style="color: #fff;" id="about-ru">
             <p class="subtitle" style="color: #fff;">Привет, я xewoo.<br>Иногда работаю с разными проектами — сейчас вот мозги себе ломаю с этим сайтом и тг ботом.</p>
         </section>
-        <section class="skills-block" style="color: #fff; margin-bottom: 18px;">
+        <section class="about-block" style="color: #fff; display:none;" id="about-en">
+            <p class="subtitle" style="color: #fff;">Hi, I'm xewoo.<br>Sometimes I work on different projects — right now I'm racking my brains with this website and a Telegram bot.</p>
+        </section>
+        <section class="skills-block" style="color: #fff; margin-bottom: 18px;" id="skills-ru">
             <h2 style="font-size:1.1rem; margin-bottom: 10px; color:#bdbdbd;">Мои скиллы:</h2>
             <ul class="skills-list" style="color: #fff; list-style: none; padding: 0; margin: 0;">
                 <li>Python — Middle</li>
@@ -24,8 +28,19 @@
                 <li>Blender, Photoshop — Basic/Junior</li>
             </ul>
         </section>
+        <section class="skills-block" style="color: #fff; margin-bottom: 18px; display:none;" id="skills-en">
+            <h2 style="font-size:1.1rem; margin-bottom: 10px; color:#bdbdbd;">My skills:</h2>
+            <ul class="skills-list" style="color: #fff; list-style: none; padding: 0; margin: 0;">
+                <li>Python — Middle</li>
+                <li>C# Unity — Middle</li>
+                <li>HTML, CSS — Basic</li>
+                <li>C++ — Basic</li>
+                <li>Blender, Photoshop — Basic/Junior</li>
+            </ul>
+        </section>
         <nav class="links">
-            <p class="subtitle" style="color: #fff; margin-bottom: 4px;">Мои контакты:</p>
+            <p class="subtitle" style="color: #fff; margin-bottom: 4px;" id="contacts-ru">Мои контакты:</p>
+            <p class="subtitle" style="color: #fff; margin-bottom: 4px; display:none;" id="contacts-en">My contacts:</p>
             <a href="https://t.me/xewch" target="_blank" class="gradient-btn tg-btn">
                 <span class="icon"> 
                     <img src="icons/telegram.svg" alt="Telegram" width="24" height="24" style="vertical-align:middle;">
@@ -48,5 +63,20 @@
             </a>
         </nav>
     </main>
+    <script>
+    (function() {
+        var lang = navigator.language || navigator.userLanguage;
+        if (lang && lang.toLowerCase().startsWith('en')) {
+            document.getElementById('title-ru').style.display = 'none';
+            document.getElementById('about-ru').style.display = 'none';
+            document.getElementById('skills-ru').style.display = 'none';
+            document.getElementById('contacts-ru').style.display = 'none';
+            document.getElementById('title-en').style.display = '';
+            document.getElementById('about-en').style.display = '';
+            document.getElementById('skills-en').style.display = '';
+            document.getElementById('contacts-en').style.display = '';
+        }
+    })();
+    </script>
 </body>
 </html>

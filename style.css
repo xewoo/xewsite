@@ -90,11 +90,11 @@ h1 {
     background: linear-gradient(90deg, #37aee2 0%, #1e96c8 100%);
 }
 .mail-btn {
-    background: linear-gradient(90deg, #ff914d 0%, #ffd452 100%);
+    background: linear-gradient(90deg, #ff873c 0%, #e7b82a 100%);
     color: #222;
 }
 .mail-btn:hover {
-    background: linear-gradient(90deg, #ffb347 0%, #ffe066 100%);
+    background: linear-gradient(90deg, #ffab36 0%, #eec626 100%);
     color: #222;
 }
 .gh-btn {
